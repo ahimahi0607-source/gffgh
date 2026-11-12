@@ -17,6 +17,11 @@ const productShema = new mongoose.Schema({
         required: [true , "Описание товара не может быть пустым"],
         trim : true,
     },
+    discription: {
+        type : String,
+        required: [true , "Описание товара не может быть пустым"],
+        trim : true,
+    },
     price: {
         type : Number,
         required: [true , "Цена товара не может быть пустой"],

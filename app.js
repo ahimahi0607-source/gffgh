@@ -4,12 +4,18 @@ import fileUpload from "express-fileupload"
 
 import connectDB from "./scr/config/db.js"
 
+import productRoutes from "./scr/routes/productRoutes.js"
+import Product from "./scr/models/Product.js"
+
 
 const app = express()
 
 connectDB()
 
 app.use(express.json())
+
+
+app.use("/api/product" , productRoutes)
 
 const PORT = 5000
 
